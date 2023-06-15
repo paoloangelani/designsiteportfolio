@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { HashLink } from "react-router-hash-link";
 import logo from "../style/img/Fried-chicken-logo-template-on-transparent-background-PNG.png";
 import navIcon1 from "../style/img/nav-icon1.svg";
 import snake from "../style/img/e00aaa77b6494fb47b0dfcff5830c88a.png";
@@ -74,7 +73,7 @@ export const NavBar = () => {
                 <a href="https://www.linkedin.com/in/paolo-angelani-b73131268/">
                   <img src={navIcon1} alt="" />
                 </a>
-                <a href="">
+                <a href="https://github.com/paoloangelani?tab=repositories">
                   <img className="snake" src={snake} alt="" />
                 </a>
                 <a href="https://www.instagram.com/ehm_pollo/?hl=it">
