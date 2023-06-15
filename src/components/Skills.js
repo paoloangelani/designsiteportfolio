@@ -8,7 +8,6 @@ import colorSharp from "../style/img/color-sharp.png";
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -34,9 +33,9 @@ export const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.<br></br> Lorem Ipsum has been the industry's standard
-                dummy text.
+                The Coder advances day after day: today he becomes more skilled
+                than yesterday, tomorrow more skilled than today. <br></br> THE
+                TRAINING NEVER ENDS.
               </p>
               <Carousel
                 responsive={responsive}

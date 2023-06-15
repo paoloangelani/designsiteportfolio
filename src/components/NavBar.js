@@ -46,7 +46,7 @@ export const NavBar = () => {
                 className={
                   activeLink === "home" ? "active navbar-link" : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("home")}>
+                onClick={() => onUpdateActiveLink("Home")}>
                 Home
               </Nav.Link>
               <Nav.Link
@@ -54,7 +54,7 @@ export const NavBar = () => {
                 className={
                   activeLink === "skills" ? "active navbar-link" : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("skills")}>
+                onClick={() => onUpdateActiveLink("Skills")}>
                 Skills
               </Nav.Link>
               <Nav.Link
@@ -64,7 +64,7 @@ export const NavBar = () => {
                     ? "active navbar-link"
                     : "navbar-link"
                 }
-                onClick={() => onUpdateActiveLink("projects")}>
+                onClick={() => onUpdateActiveLink("Projects")}>
                 Projects
               </Nav.Link>
             </Nav>
@@ -74,10 +74,10 @@ export const NavBar = () => {
                 <a href="https://www.linkedin.com/in/paolo-angelani-b73131268/">
                   <img src={navIcon1} alt="" />
                 </a>
-                <a href="#">
+                <a href="https://github.com/paoloangelani?tab=repositories">
                   <img src={navIcon2} alt="" />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/ehm_pollo/?hl=it">
                   <img src={navIcon3} alt="" />
                 </a>
               </div>
