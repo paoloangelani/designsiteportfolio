@@ -17,7 +17,7 @@ export const Footer = () => {
               <a href="https://www.linkedin.com/in/paolo-angelani-b73131268/">
                 <img src={navIcon1} alt="Icon" />
               </a>
-              <a href="">
+              <a href="https://github.com/paoloangelani?tab=repositories">
                 <img className="snake" src={snake} alt="" />
               </a>
               <a href="https://www.instagram.com/ehm_pollo/?hl=it">
