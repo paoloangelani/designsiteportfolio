@@ -78,9 +78,6 @@ export const Banner = () => {
                     November I've been throwing myself into the code every day
                     and dream of being able to learn more and more
                   </p>
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
                 </div>
               )}
             </TrackVisibility>
