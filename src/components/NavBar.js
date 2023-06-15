@@ -1,15 +1,16 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
 import logo from "../style/img/Fried-chicken-logo-template-on-transparent-background-PNG.png";
 import navIcon1 from "../style/img/nav-icon1.svg";
-import navIcon2 from "../style/img/nav-icon2.svg";
+import snake from "../style/img/e00aaa77b6494fb47b0dfcff5830c88a.png";
 import navIcon3 from "../style/img/nav-icon3.svg";
 import { BrowserRouter as Router } from "react-router-dom";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [showCanvas, setShowCanvas] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -20,13 +21,27 @@ export const NavBar = () => {
       }
     };
 
-    window.addEventListener("scroll", onScroll);
+    const handleClickOutsideCanvas = (event) => {
+      if (showCanvas && !event.target.closest(".canvas")) {
+        setShowCanvas(false);
+      }
+    };
 
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    window.addEventListener("scroll", onScroll);
+    window.addEventListener("click", handleClickOutsideCanvas);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("click", handleClickOutsideCanvas);
+    };
+  }, [showCanvas]);
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
+  };
+
+  const toggleCanvas = () => {
+    setShowCanvas(!showCanvas);
   };
 
   return (
@@ -70,12 +85,11 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                {" "}
                 <a href="https://www.linkedin.com/in/paolo-angelani-b73131268/">
                   <img src={navIcon1} alt="" />
                 </a>
-                <a href="https://github.com/paoloangelani?tab=repositories">
-                  <img src={navIcon2} alt="" />
+                <a href="#" onClick={toggleCanvas}>
+                  <img className="snake" src={snake} alt="" />
                 </a>
                 <a href="https://www.instagram.com/ehm_pollo/?hl=it">
                   <img src={navIcon3} alt="" />
@@ -86,6 +100,9 @@ export const NavBar = () => {
                   <span>Let’s Connect</span>
                 </button>
               </HashLink>
+              {showCanvas && (
+                <div className="canvas">{/* Canvas content */}</div>
+              )}
             </span>
           </Navbar.Collapse>
         </Container>
