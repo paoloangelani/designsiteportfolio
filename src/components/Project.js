@@ -38,8 +38,8 @@ export const Project = () => {
                   }>
                   <h2>Projects</h2>
                   <p>
-                    During my learning to code in Epicode I was able to develop
-                    several projects. I'd love to show them to you!
+                    During my learning journey to code in Epicode I was able to
+                    develop several projects. I'd love to show them to you!
                   </p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
