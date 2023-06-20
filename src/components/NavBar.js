@@ -73,7 +73,7 @@ export const NavBar = () => {
                 <a href="https://www.linkedin.com/in/paolo-angelani-b73131268/">
                   <img src={navIcon1} alt="" />
                 </a>
-                <a href="https://github.com/paoloangelani?tab=repositories">
+                <a href="https://chickensnake.netlify.app/">
                   <img className="snake" src={snake} alt="" />
                 </a>
                 <a href="https://www.instagram.com/ehm_pollo/?hl=it">
